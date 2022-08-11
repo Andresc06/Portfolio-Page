@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300;500&family=Lobster&family=Roboto:wght@500&family=Shadows+Into+Light&family=Teko&display=swap');
+
+section {
+    border-bottom: solid 5px #000;
+}
+
+/*PRINCIPAL SECTION*/
+#header {
+    background: linear-gradient(rgb(0, 0, 0), 10%, transparent);
+    width:100%; 
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/*BACKGROUND PRINCIPAL SECTION*/
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+          -45deg, 
+          #4c4c4c 0%,  
+          rgb(55, 0, 74) 51%, 
+          #740021 100%
+    );  
+    animation: AnimateBG 5s ease infinite;
+}
+
+@keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/*PROFILE CARD*/
+.card {
+    cursor: pointer;
+    width: 326px;
+    height: 500px;
+    background: #f2f2f3;
+    border: 1px solid #000;
+    box-shadow: 20px 20px 5px 2px #000;
+    font-size: 15px;
+    transition-duration: .7s;
+}
+
+.img-full {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transition: width, height, box-shadow, font-size;
+    box-shadow: -30px 30px 5px -10px #000;
+    height: 550px;
+    width: 350px;
+    transition-duration: .7s;
+    font-size: 120%;
+}
+
+.card .img-card {
+    margin: 1em;
+    margin-bottom: 0.4em;
+    border-radius: 10px;
+    box-shadow: -5px -5px 8px #ffffff7a, 
+    5px 5px 8px #a9a9aa7a;
+}
+   
+.card .info {
+    text-align: center;
+    margin-top: 0.4em;
+    font-family: 'Shadows Into Light';
+    letter-spacing: 2.5px;
+}
+   
+.card .info > h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+   
+.card a {
+    text-decoration: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+  
+.button_top {
+   display: block;
+   margin: 10px 25px;
+   box-sizing: border-box;
+   border: 2px solid #000000;
+   border-radius: 0.75em;
+   padding: 0.3em .5em;
+   background: #e8e8e8;
+   color: #000000;
+   font-family: 'Teko';
+   font-size: 25px;
+   letter-spacing: 2.5px;
+   transform: translateY(-0.2em);
+   transition: transform, font-size 0.2s ease;
+   box-shadow: 0px 5px 0px #000;
+}
+  
+button:hover .button_top {
+   transform: translateY(-0.33em);
+   font-size: 30px;
+}
+  
+button:active .button_top {
+   transform: translateY(0);
+}
+   
+
+/*LINKS NAV-BAR*/
+.nav-link {
+    text-align: center;
+    margin: 2px;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    transition: font-size, color, font-weigth;
+    transition-duration: .7s;
+    font-weight: bold;
+    color: #8400ff !important;
+}
+
+/*ABOUT ME SECTION*/
+#about-me {
+    background: url(../img/me-section.webp) no-repeat fixed center; background-size: cover;
+    position: relative;
+    padding: 50px;
+}
+
+#about-title {
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    background-color:  #fff;
+    color: #FF5733;
+    padding: 10px;
+    text-shadow: 2px 5px 0px #000;
+    width: 40%;
+    box-shadow: 0px -10px 0px 5px #FF5733;
+}
+
+
+.cuadro {
+	font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+	background-color: #E4E4E4;
+    box-shadow: -20px -20px #da8e1e;
+	border-radius: 10px;
+	opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.link-button {
+    display: inline;
+    border-radius: 5px;
+    border: solid 3px #000;
+    box-shadow: 5px 5px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.link-account {
+    text-decoration: none;
+    color: #ff0058;
+}
+
+.link-account:hover {
+    transition: color .5s;
+    color: #ffbc00;
+}
+
+/*ABOUT ME BOX EFFECT*/
+.box {
+    position: relative;
+    padding-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+}
+   
+.box::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+   
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+}
+   
+.box:hover:before,
+.box:hover:after {
+    transform: skewX(0deg) scaleX(1.3);
+}
+   
+.box:before,
+.box:after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058)
+}
+   
+.box .content {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    padding: 20px 40px;
+    background: url(../img/andres.jpeg) no-repeat center; background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*SKILLS SECTION*/
+#skills{
+	background-color: #151f20;
+}
+
+.underline{
+	width: 150px;
+	border: 3px solid #eee;
+	margin: auto;
+}
+
+.text-skill {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.skill:hover {
+    transition: font-size 1s;
+    font-size: 150%;
+}
+
+/*CERTIFICATES SECTION*/
+#certificates{
+	background-color: #151f20;
+    padding: 30px;
+}
+
+.certificate-list a{
+    text-decoration: none;
+    color: #FFF;
+    text-align: left;
+}
+
+.certificate-list li {
+    margin: 10px;
+}
+
+#cert-1 li:hover {
+    color: #3F3F3F;
+}
+
+#cert-2 li:hover {
+    color: #00acee;
+}
+
+#cert-3 li:hover {
+    color: #0e76a8;
+}
+
+.certificate-title {
+    margin-top: 30px;
+    font-family: 'Shadows Into Light';
+}
+
+.abilities-title {
+    margin: 20px;
+}
+
+/*PROJECTS SECTION*/
+#projects {
+    background: url(../img/projects.jpg) no-repeat fixed center; background-size: cover;
+    position: relative;
+    padding: 50px;
+}
+  
+#projects:before, #about-me:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*HTML-CSS PROJECTS*/
+#Web-Pages {
+    color: #70481b;
+    text-shadow: 2px 5px 3px #000;
+    box-shadow: #636262 0px 0px 0px 3px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(74, 0, 99) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,  #900029 20px -20px;
+}
+
+.webpage-card:hover {
+    border: #70481b 0.2em solid;
+}
+
+.wp-text:hover {
+    color: #462500;
+}
+
+.title-projects {
+    width: 250px;
+    font-size: 48px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    background-color:  #fff;
+    padding: 10px;
+}
+
+/*PROJECT CARDS*/
+.second-card {
+    margin-top: 80px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.5);
+    border: #ffffff 0.2rem solid;
+    transition: all 0.4s ease-in;
+    box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+}
+
+.second-card a {
+    text-decoration: none;
+}
+
+.second-card:hover {
+    transform: translateY(-1.5rem);
+    border-radius: 2.5rem 0 2.5rem 0;
+}
+
+.card-inf {
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 2em;
+}
+
+.info-card > span {
+    font-weight: bold;
+    font-size: 2em;
+    color: #fff;
+}
+
+.info-card > span:hover {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.info-card {
+    text-align: center;
+    margin-top: 0.7em;
+    font-family: 'Shadows Into Light';
+    letter-spacing: 2.5px;  
+}
+   
+/*CENTER PROJECT CARDS*/
+div .col {
+    width: auto;
+    margin: auto auto;
+}
+
+/*JAVASCRIPT TITLE*/
+#JavaScript {
+    margin-top: 8%;
+    text-align: center;
+    color: #e2ad00;
+    font-weight: bold;
+    text-shadow: 2px 5px 0px #000;
+    background-color: #fff;
+    padding-bottom: 10px;
+    width: 50%;
+    box-shadow: 10px -10px#e2ad00;
+}
+
+.js-card:hover {
+    border: #e2ad00 0.2em solid;
+}
+
+.js-text:hover {
+    color: #edb600;
+}
+
+#bot {
+    width: 95%;
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+/*FOOTER*/
+.page-footer {
+    background-color: #3F3F3F;
+}
+  
+.nav-contact {
+    text-align: center;
+    justify-content: space-around;
+    line-height: 15vh;
+}
+  
+.contact-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 200%;
+    text-shadow: 3px 3px 1px black;
+    font-family: "KoHo";
+}
+
+.footer-copyright {
+    font-size: 150%;
+    margin-top: -10px;
+    color: #fff;
+    font-family: 'Shadows Into Light';
+}
+  
+.fa-github, .fa-linkedin, .fa-twitter, .fa-mobile-alt {
+    margin-right: 10px;
+}
+
+.contact-link:first-child:hover {
+    transition: color .3s;
+    color: #1b1b1b;
+}
+
+.contact-link:nth-child(2):hover {
+    transition: color .3s;
+    color: #0e76a8;
+}
+
+.contact-link:nth-child(3):hover {
+    transition: color .3s;
+    color: #00acee;
+}
+
+.contact-link:nth-child(4):hover {
+    transition: color .3s;
+    color: #229954;
+}
+
+@media (max-width: 550px) {
+
+    #about-title {
+        font-size: 30px;
+    }
+
+    .second-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .card-inf {
+        height: 200px;
+    }
+    
+    .info-card > span {
+        font-size: 1em;
+    }
+
+    #JavaScript {
+        font-size: 28px;
+    }
+
+    .contact-link {
+        font-size: 20px;
+        display: block;
+    }
+
+    .box {
+        margin: 50px auto;
+    }
+}
+
+@media (min-width: 761px) {
+
+    .cuadro {
+        font-size: 28px;
+        width: 60% !important;
+    }
+
+    .box {
+        width: 400px;
+        height: 500px;
+    }
+
+    .box .content {
+        width: 300px;
+        height: 450px;
+    }
+}
+
+@media (min-width: 482px) and (max-width: 1149px) {
+
+    .nav-link {
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .nav-link:hover {
+        font-size: 25px;
+    }
+
+    .nav-link {
+        margin-right: 40px;
+        margin-left: 20px;
+    }
+
+    .contact-link {
+        display: block;
+        line-height: 8vh;
+    }
+
+    #about-title {
+        font-size: 40px;
+    }
+
+}
+
+@media (min-width: 1150px) {
+
+    .nav-link {
+        line-height: 40px;
+        font-size: 25px;
+    }
+
+    .nav-link:hover {
+        font-size: 28px;
+    }
+
+    .nav-link {
+        margin-right: 40px;
+        margin-left: 20px;
+    }
+
+    #about-title {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 1406px) {
+
+    .nav-link {
+        margin-right: 55px;
+        margin-left: 60px;
+    }
+}
